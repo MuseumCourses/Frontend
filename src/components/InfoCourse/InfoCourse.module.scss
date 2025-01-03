@@ -1,0 +1,85 @@
+@use './../../styles/base/variables' as *;
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 45px;
+  padding: 55px 50px;
+  background-color: $background-secondary;
+  border-radius: 24px;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 65px;
+  width: 100%;
+
+  font-family: $font-felidae;
+  font-weight: 400;
+  color: $text-info;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0%;
+  &_line{
+    width: 1px;
+    height: 165px;
+    background-color: #2D2826;
+  }
+  &_item{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+  }
+  &_sub-text{
+    text-align: end;
+    margin-right: 40px;
+  }
+  &_item-title{
+    font-family: $font-playfair;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    color: $title-info;
+    text-transform: uppercase;
+  }
+  &_item-subtitle{
+    margin: 25px 0 22px;
+  }
+  &_btn{
+    background-color: $background-button-other;
+    padding: 51px 20px 8px;
+    margin-top: 50px;
+    line-height: 43px;
+    text-align: center;
+    color: $btn-text-color;
+    text-transform: uppercase;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 34px;
+      background-color: $background-primary;
+      top: -1px;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+
+    &::before {
+      left: -1px;
+    }
+    &::after{
+      right: -1px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+    }
+  }
+}
