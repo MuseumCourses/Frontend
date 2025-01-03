@@ -1,0 +1,15 @@
+@use './base/fonts' as *;
+@use './base/variables' as *;
+@use './base/reset' as *;
+@use './mixins/mixins' as *;
+@use './layouts/layouts' as *;
+
+body {
+  background-color: $background-primary;
+  font-weight: 400;
+  font-size: 36px;
+}
+h1 {
+  font-family: $font-playfair-bold;
+  font-weight: 700;
+}
