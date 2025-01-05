@@ -52,6 +52,9 @@
     @include respond-to(sm) {
       gap: 15px;
     }
+    @include respond-to(md) {
+      gap: 25px;
+    }
   }
 
   &_title {
@@ -83,6 +86,7 @@
     @include respond-to(xs) {
       font-size: 14px;
       line-height: 14px;
+      max-width: 320px;
     }
 
     @include respond-to(sm) {
@@ -92,6 +96,8 @@
     @include respond-to(md) {
       font-size: 16px;
       line-height: 20px;
+      max-width: 380px;
+      width: 100%;
     }
   }
 }
