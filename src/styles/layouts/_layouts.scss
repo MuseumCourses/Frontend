@@ -5,8 +5,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  @include respond-to(sm) {
+
+  @include respond-to(xs) {
     padding: 0 10px;
   }
 

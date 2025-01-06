@@ -1,0 +1,132 @@
+@use './../../styles/base/variables' as *;
+@use './../../styles/mixins/mixins' as *;
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+  
+  & .reverse{
+    padding: 20px;
+    background-color: $background-relevance;
+    border-radius: 20px;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  & .center_text{
+    align-items: center;
+    & p{
+      margin-top: 0;
+    }
+  }
+}
+
+.about_us {
+  &_item{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 40px;
+    margin-bottom: 20px;
+    @include respond-to(xs) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 10px;
+      justify-items: center;
+    }
+  
+    @include respond-to(sm) {
+      grid-template-columns: 2fr 2fr;
+    }
+  
+    @include respond-to(md) {
+      gap: 20px;
+    }
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    @include respond-to(xs) {
+      order: -1;
+    }
+  }
+
+  &_title {
+    @include property-text($font-angst-bold, 700, $title-text-color, 40px, 56px, 0px);
+    text-align: center;
+
+    @include respond-to(xs) {
+      font-size: 26px;
+      line-height: 28px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 30px;
+    }
+
+    @include respond-to(md) {
+      font-size: 38px;
+      line-height: 56px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 46px;
+    }
+  }
+
+  &_text {
+    margin-top: 62px;
+    @include property-text($font-montserrat, 400, $title-text-color, 16px, 20px, 5%);
+    text-align: center;
+
+    max-width: 420px;
+    width: 100%;
+
+    @include respond-to(xs) {
+      font-size: 14px;
+      margin-top: 10px;
+      max-width: 350px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 14px;
+      margin-top: 20px;
+      max-width: 420px;
+    }
+
+    @include respond-to(md) {
+      font-size: 16px;
+      margin-top: 40px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 22px;
+      margin-top: 60px;
+      max-width: 480px;
+    }
+  }
+
+  &_image {
+    max-width: 370px;
+    width: 100%;
+    height: auto;
+    display: block;
+    @include respond-to(xs) {
+      max-width:300px;
+      order: 1;
+    }
+
+    @include respond-to(sm){
+      order: -1;
+    }
+
+    @include respond-to(md) {
+      max-width: 450px;
+      order: -1;
+    }
+
+    @include respond-to(lg) {
+      max-width: 520px;
+    }
+  }
+}

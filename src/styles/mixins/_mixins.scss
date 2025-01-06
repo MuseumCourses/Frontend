@@ -1,7 +1,11 @@
 @use '../base/variables' as *;
 
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == sm {
+  @if $breakpoint == xs {
+    @media (min-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
     @media (min-width: $breakpoint-sm) {
       @content;
     }
@@ -18,4 +22,13 @@
       @content;
     }
   }
+}
+
+@mixin property-text($f-f, $f-w, $color, $f-s, $l-h, $l-s) {
+  font-family: $f-f;
+  font-weight: $f-w;
+  color: $color;
+  font-size: $f-s;
+  line-height: $l-h;
+  letter-spacing: $l-s;
 }
