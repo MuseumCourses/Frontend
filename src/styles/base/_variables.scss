@@ -3,6 +3,9 @@ $text-color: #451421;
 $title-color: #6e2c3e;
 $btn-text-color: #f1ebe9;
 
+$text-info: #1e1e1e;
+$title-info: #541828;
+
 $text-color-other: #dac4ab;
 $title-color-other: #dfccc1;
 $btn-text-color: #f1ebe9;
@@ -16,6 +19,7 @@ $background-text: #b2a08c;
 
 $background-button: #91917c;
 $background-button-other: #5f5643;
+$background-relevance: #C3B19E;
 
 //Шрифты
 $font-montserrat: 'Montserrat-Regular', sans-serif;
@@ -25,6 +29,7 @@ $font-angst-bold: 'Angst-Bold', sans-serif;
 $font-playfair-bold: 'PlayfairDisplay-Bold', sans-serif;
 
 // Точки адаптива
+$breakpoint-xs: 320px;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;

@@ -1,12 +1,16 @@
+import InfoCourse from './components/InfoCourse/InfoCourse';
+import Slider from './components/Slider/Slider';
+import Relevance from './components/Relevance/Relevance';
+
 import './styles/main.scss';
+
 function App() {
   return (
     <>
       <div className="container">
-        <h1 className="title_1">
-          Программа повышения квалификации “Просветительская коммуникация в
-          музейном и экскурсионном деле”
-        </h1>
+        <InfoCourse />
+        <Slider />
+        <Relevance />
       </div>
     </>
   );
