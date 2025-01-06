@@ -8,27 +8,22 @@
   align-items: center;
 
   @include respond-to(xs) {
-    padding: 0 10px;
     gap: 20px;
   }
 
   @include respond-to(sm) {
-    padding: 0 30px;
     gap: 30px;
   }
 
   @include respond-to(md) {
-    padding: 0 40px;
     gap: 40px;
   }
 
   @include respond-to(lg) {
-    padding: 0 50px;
     gap: 50px;
   }
 
   @include respond-to(xl) {
-    padding:0 60px;
     gap: 60px;
   }
 }
@@ -152,7 +147,7 @@
       margin: 20px 0 18px;
     }
   }
-  &_item-description{
+  &_item-description {
     @include respond-to(xs) {
       font-size: 22px;
       line-height: 28px;
