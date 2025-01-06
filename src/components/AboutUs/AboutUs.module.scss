@@ -2,26 +2,25 @@
 @use './../../styles/mixins/mixins' as *;
 
 .container {
-
   display: flex;
   flex-direction: column;
-  
-  & .reverse{
+
+  & .reverse {
     padding: 20px;
     background-color: $background-relevance;
     border-radius: 20px;
     box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
-  & .center_text{
+  & .center_text {
     align-items: center;
-    & p{
+    & p {
       margin-top: 0;
     }
   }
 }
 
 .about_us {
-  &_item{
+  &_item {
     display: grid;
     grid-template-columns: 2fr 2fr;
     gap: 40px;
@@ -32,11 +31,11 @@
       padding: 10px;
       justify-items: center;
     }
-  
+
     @include respond-to(sm) {
       grid-template-columns: 2fr 2fr;
     }
-  
+
     @include respond-to(md) {
       gap: 20px;
     }
@@ -52,7 +51,14 @@
   }
 
   &_title {
-    @include property-text($font-angst-bold, 700, $title-text-color, 40px, 56px, 0px);
+    @include property-text(
+      $font-angst-bold,
+      700,
+      $title-text-color,
+      40px,
+      56px,
+      0px
+    );
     text-align: center;
 
     @include respond-to(xs) {
@@ -76,7 +82,14 @@
 
   &_text {
     margin-top: 62px;
-    @include property-text($font-montserrat, 400, $title-text-color, 16px, 20px, 5%);
+    @include property-text(
+      $font-montserrat,
+      400,
+      $title-text-color,
+      16px,
+      20px,
+      5%
+    );
     text-align: center;
 
     max-width: 420px;
@@ -112,11 +125,11 @@
     height: auto;
     display: block;
     @include respond-to(xs) {
-      max-width:300px;
+      max-width: 300px;
       order: 1;
     }
 
-    @include respond-to(sm){
+    @include respond-to(sm) {
       order: -1;
     }
 

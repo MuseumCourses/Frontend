@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: center;
 
-
   @include respond-to(xs) {
     padding: 0 10px;
   }
