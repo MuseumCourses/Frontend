@@ -1,0 +1,126 @@
+@use './../../styles/base/variables' as *;
+@use './../../styles/mixins/mixins' as *;
+
+.cost_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('./../../assets/images/cost-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond-to(xs) {
+    margin: 0 -10px;
+    min-height: 70vh;
+  }
+
+  @include respond-to(sm) {
+    margin: 0 -10px;
+    min-height: 80vh;
+  }
+  @include respond-to(md) {
+    margin: 0 -15px;
+  }
+
+  @include respond-to(lg) {
+    margin: 0 -20px;
+    min-height: 100vh;
+  }
+
+  @include respond-to(xl) {
+    margin: 0 -25px;
+  }
+
+  &_circle {
+    background: $program-header-color;
+    opacity: 0.6;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include property-text($font-playfair, 400, $title-info, 48px, 64px, 0%);
+    text-align: $align;
+
+    @include respond-to(xs) {
+      font-size: 24px;
+      line-height: 36px;
+      width: 300px;
+      height: 300px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 32px;
+      line-height: 40px;
+      width: 360px;
+      height: 360px;
+    }
+
+    @include respond-to(md) {
+      font-size: 40px;
+      line-height: 44px;
+      width: 420px;
+      height: 420px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 48px;
+      line-height: 64px;
+      width: 480px;
+      height: 480px;
+    }
+  }
+  &_text{
+    width: 100%;
+    text-align: center;
+    @include respond-to(xs) {
+      max-width: 230px;
+    }
+    @include respond-to(sm) {
+      max-width: 300px;
+    }
+    @include respond-to(md) {
+      max-width: 350px;
+    }
+
+    @include respond-to(lg) {
+      max-width: 406px;
+    }
+  }
+
+  &_apply_button {
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: $align;
+
+    a {
+      color: rgb(221, 210, 213);
+      @include property-text($font-felidae, 400, rgb(221, 210, 213), 48px, 53px, 0%);
+      text-decoration: none;
+      text-align: $align;
+
+      @include respond-to(xs) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+
+      @include respond-to(md) {
+        font-size: 40px;
+        line-height: 40px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 48px;
+        line-height: 53px;
+      }
+    }
+  }
+}
