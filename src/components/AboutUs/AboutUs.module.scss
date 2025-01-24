@@ -4,13 +4,6 @@
 .container {
   display: flex;
   flex-direction: column;
-
-  & .reverse {
-    padding: 20px;
-    background-color: $background-relevance;
-    border-radius: 20px;
-    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
   & .center_text {
     align-items: center;
     & p {
@@ -21,29 +14,27 @@
 
 .about_us {
   &_item {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 40px;
+    display: flex;
     margin-bottom: 20px;
     @include respond-to(xs) {
-      grid-template-columns: 1fr;
       gap: 10px;
       padding: 10px;
-      justify-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
     @include respond-to(sm) {
-      grid-template-columns: 2fr 2fr;
-    }
-
-    @include respond-to(md) {
+      flex-direction: row;
       gap: 20px;
+    }
+    @include respond-to(md) {
+      flex-direction: row;
+      gap: 60px;
     }
   }
   &_content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     margin-top: 15px;
     @include respond-to(xs) {
       order: -1;
@@ -59,7 +50,8 @@
       56px,
       0px
     );
-    text-align: center;
+    text-align: start;
+    width: 100%;
 
     @include respond-to(xs) {
       font-size: 26px;
@@ -81,41 +73,32 @@
   }
 
   &_text {
-    margin-top: 62px;
     @include property-text(
       $font-montserrat,
       400,
       $title-text-color,
-      16px,
-      20px,
+      15px,
+      18px,
       5%
     );
-    text-align: center;
-
-    max-width: 420px;
+    text-align: start;
+    max-width: 520px;
     width: 100%;
 
     @include respond-to(xs) {
-      font-size: 14px;
       margin-top: 10px;
-      max-width: 350px;
     }
 
     @include respond-to(sm) {
-      font-size: 14px;
       margin-top: 20px;
-      max-width: 420px;
     }
 
     @include respond-to(md) {
-      font-size: 16px;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     @include respond-to(lg) {
-      font-size: 22px;
-      margin-top: 60px;
-      max-width: 480px;
+      margin-top: 40px;
     }
   }
 
@@ -124,10 +107,6 @@
     width: 100%;
     height: auto;
     display: block;
-    @include respond-to(xs) {
-      max-width: 300px;
-      order: 1;
-    }
 
     @include respond-to(sm) {
       order: -1;
@@ -141,5 +120,54 @@
     @include respond-to(lg) {
       max-width: 520px;
     }
+  }
+  &_desc{
+    border: 3px solid rgb(95, 101, 81);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+padding: 24px 20px;
+margin-top: 60px;
+
+@include property-text(
+      $font-montserrat,
+      400,
+      $title-text-color,
+      15px,
+      18px,
+      0%
+    );
+text-align: left;
+  }
+}
+.item_center{
+  justify-content: space-between;
+}
+.content_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about_us_image_program {
+  max-width: 370px;
+  width: 100%;
+  height: auto;
+  display: block;
+  @include respond-to(xs) {
+    max-width: 270px;
+  }
+  @include respond-to(md) {
+    max-width: 370px;
+  }
+}
+
+.reverse_image {
+  @include respond-to(xs) {
+    margin-left: 0;
+  }
+  @include respond-to(sm) {
+    margin-left: -30%;
+  }
+  @include respond-to(md) {
+    margin-left: -25%;
   }
 }

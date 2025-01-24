@@ -73,7 +73,7 @@
       height: 480px;
     }
   }
-  &_text{
+  &_text {
     width: 100%;
     text-align: center;
     @include respond-to(xs) {
@@ -98,7 +98,14 @@
 
     a {
       color: rgb(221, 210, 213);
-      @include property-text($font-felidae, 400, rgb(221, 210, 213), 48px, 53px, 0%);
+      @include property-text(
+        $font-felidae,
+        400,
+        rgb(221, 210, 213),
+        48px,
+        53px,
+        0%
+      );
       text-decoration: none;
       text-align: $align;
 

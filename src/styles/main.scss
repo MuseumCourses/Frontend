@@ -5,7 +5,7 @@
 @use './layouts/layouts' as *;
 
 body {
-  background-color: $background-primary;
+  background: $background-primary;
   font-weight: 400;
   font-size: 36px;
 }

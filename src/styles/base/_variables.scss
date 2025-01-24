@@ -4,28 +4,34 @@ $title-color: #6e2c3e;
 $btn-text-color: #f1ebe9;
 
 $text-info: #1e1e1e;
-$title-info: #541828;
+$title-info: #DCCCB9;
 
-$text-color-other: #dac4ab;
+
+$text-color-other: #E1CDB8;
 $title-color-other: #dfccc1;
 $btn-text-color: #f1ebe9;
 $btn-text-color-other: #1f2319;
 
 // Фоны
-$background-primary: #dcccb9;
+$background-primary: linear-gradient(180.00deg, rgb(79, 80, 64),rgb(95, 90, 74) 24.9%,rgb(68, 73, 58) 70.4%);
 $background-secondary: #cbb7a1;
 $background-program: #515945e3;
 $background-text: #b2a08c;
 
 $background-button: #91917c;
 $background-button-other: #5f5643;
-$background-relevance: #c3b19e;
+$background-relevance: linear-gradient(
+  180deg,
+  rgb(79, 80, 64),
+  rgb(95, 90, 74) 24.9%,
+  rgb(68, 73, 58) 70.4%
+);
 
 $background-color: #f0e7dc;
-$title-text-color: rgb(110, 44, 62);
+$title-text-color: rgb(225, 205, 184);
 $learning-item-color: rgb(195, 177, 158);
 $teachers__title: rgb(110, 70, 81);
-$program-background: rgba(81, 89, 69, 0.89);
+$program-background: rgba(205, 196, 183, 0);
 $program-header-color: rgb(223, 204, 193);
 $teachers-background: rgb(220, 204, 185);
 $button-programm-color: rgb(225, 205, 184);

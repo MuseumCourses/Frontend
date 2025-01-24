@@ -4,8 +4,6 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: start;
-  background-color: $background-relevance;
 
   @include respond-to(xs) {
     margin: 0 -10px;
@@ -20,6 +18,7 @@
     padding: 8px 8px 10px 20px;
     gap: 15px;
     flex-direction: row;
+    align-items: start;
   }
 
   @include respond-to(md) {
@@ -44,23 +43,23 @@
   &_item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 25px;
     @include respond-to(xs) {
-      gap: 10px;
+      gap: 20px;
     }
     @include respond-to(sm) {
-      gap: 15px;
+      gap: 25px;
     }
     @include respond-to(md) {
-      gap: 25px;
+      gap: 35px;
     }
   }
 
   &_title {
     @include property-text($font-playfair, 700, $title-info, 36px, 48px, 1px);
-    text-align: center;
-    max-width: 448px;
+    text-align: start;
+    max-width: 350px;
     width: 100%;
     @include respond-to(xs) {
       font-size: 22px;
@@ -80,24 +79,14 @@
 
   &_text {
     @include property-text($font-montserrat, 400, $title-info, 16px, 20px, 5%);
-    text-align: center;
-    max-width: 380px;
-    width: 100%;
+    text-align: start;
     @include respond-to(xs) {
-      font-size: 14px;
-      line-height: 14px;
-      max-width: 320px;
-    }
-
-    @include respond-to(sm) {
       font-size: 14px;
       line-height: 14px;
     }
     @include respond-to(md) {
       font-size: 16px;
       line-height: 20px;
-      max-width: 380px;
-      width: 100%;
     }
   }
 }
@@ -110,11 +99,6 @@
   @include respond-to(xs) {
     max-width: 300px;
   }
-
-  @include respond-to(sm) {
-    max-width: 280px;
-  }
-
   @include respond-to(md) {
     max-width: 350px;
   }

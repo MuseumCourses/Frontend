@@ -35,7 +35,14 @@
   }
 
   &_header {
-    @include property-text($font-angst-bold, 700, $program-header-color, 36px, 50px, 0%);
+    @include property-text(
+      $font-angst-bold,
+      700,
+      $program-header-color,
+      36px,
+      50px,
+      0%
+    );
     text-align: $align;
     margin-bottom: 20px;
 
@@ -86,7 +93,14 @@
       gap: ($gap-content * 9.5);
     }
     .module_button_text {
-      @include property-text($font-felidae, 400, $button-programm-color, 32px, 35px, 0%);
+      @include property-text(
+        $font-felidae,
+        400,
+        $button-programm-color,
+        32px,
+        35px,
+        0%
+      );
       text-align: $align;
       @include respond-to(xs) {
         font-size: 24px;
@@ -138,17 +152,17 @@
         font-size: 14px;
         line-height: 16px;
       }
-  
+
       @include respond-to(sm) {
         font-size: 16px;
         line-height: 22px;
       }
-  
+
       @include respond-to(md) {
         font-size: 22px;
         line-height: 26px;
       }
-  
+
       @include respond-to(lg) {
         font-size: 24px;
         line-height: 32px;
@@ -157,7 +171,14 @@
   }
 
   .description {
-    @include property-text($font-montserrat, 400, $description-color, 20px, 24px, 5%);
+    @include property-text(
+      $font-montserrat,
+      400,
+      $description-color,
+      20px,
+      24px,
+      5%
+    );
     text-align: $align;
     margin-top: 34px;
     margin-bottom: 30px;
@@ -233,7 +254,14 @@
 
     &_learning_item_1,
     &_learning_item_2 {
-      @include property-text($font-playfair, 400, $learning-item-color, 36px, 48px, 0%);
+      @include property-text(
+        $font-playfair,
+        400,
+        $learning-item-color,
+        36px,
+        48px,
+        0%
+      );
       text-align: $align;
 
       @include respond-to(xs) {
