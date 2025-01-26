@@ -121,13 +121,13 @@
       max-width: 520px;
     }
   }
-  &_desc{
+  &_desc {
     border: 3px solid rgb(95, 101, 81);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-padding: 24px 20px;
-margin-top: 60px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 24px 20px;
+    margin-top: 60px;
 
-@include property-text(
+    @include property-text(
       $font-montserrat,
       400,
       $title-text-color,
@@ -135,13 +135,13 @@ margin-top: 60px;
       18px,
       0%
     );
-text-align: left;
+    text-align: left;
   }
 }
-.item_center{
+.item_center {
   justify-content: space-between;
 }
-.content_text{
+.content_text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

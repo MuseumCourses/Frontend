@@ -6,8 +6,8 @@ const Cost = () => {
       <div className={styles.cost_section_circle}>
         <span className={styles.cost_section_text}>СТОИМОСТЬ КУРСА</span>
       </div>
-      <div className={styles.cost_section_apply_button}>
-        <a href="#">ОСТАВИТЬ ЗАЯВКУ</a>
+      <div className={styles.costBlock}>
+        <span>100 000 руб.</span>
       </div>
     </section>
   );

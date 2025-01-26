@@ -37,7 +37,7 @@
   margin-top: 65px;
   width: 100%;
 
-  background: rgb(68, 73, 58,.6);
+  background: rgb(68, 73, 58, 0.6);
   border: 3px solid rgb(222, 210, 195);
   border-radius: 3px;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -83,13 +83,13 @@
     width: 100%;
     text-align: start;
   }
-  &_sub-text-even{
-    text-align: end
+  &_sub-text-even {
+    text-align: end;
   }
 
   &_item-title {
     @include property-text($font-angst-bold, 700, $title-info, 36px, 48px, 0%);
-    
+
     text-transform: uppercase;
 
     @include respond-to(xs) {
@@ -113,7 +113,7 @@
   }
 
   &_item-subtitle,
-  &_item-description{
+  &_item-description {
     @include property-text($font-montserrat, 400, $title-info, 24px, 33px, 0%);
   }
 
@@ -140,7 +140,7 @@
     }
   }
 }
-.contentProcess{
+.contentProcess {
   margin-left: 15px;
   display: flex;
   flex-direction: column;
@@ -148,15 +148,15 @@
   align-items: start;
   gap: 25px;
 }
-.processTitle{
+.processTitle {
   @include property-text($font-angst-bold, 700, $title-info, 36px, 50px, 0%);
   margin-left: 15px;
 }
-.processText{
+.processText {
   @include property-text($font-montserrat, 400, $title-info, 16px, 18px, 5%);
   max-width: 780px;
   width: 100%;
-  @include respond-to(xs){
+  @include respond-to(xs) {
     font-size: 14px;
     line-height: 18px;
   }
@@ -164,4 +164,8 @@
     font-size: 16px;
     line-height: 24px;
   }
+}
+.line {
+  border: 1px solid rgb(95, 101, 81);
+  width: 85%;
 }

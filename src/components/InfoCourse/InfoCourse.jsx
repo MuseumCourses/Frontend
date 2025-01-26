@@ -37,6 +37,7 @@ const InfoCourse = () => {
           проекта.
         </p>
       </div>
+      <div className={styles.line}></div>
     </div>
   );
 };

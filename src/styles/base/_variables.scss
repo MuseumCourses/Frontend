@@ -4,16 +4,20 @@ $title-color: #6e2c3e;
 $btn-text-color: #f1ebe9;
 
 $text-info: #1e1e1e;
-$title-info: #DCCCB9;
+$title-info: #dcccb9;
 
-
-$text-color-other: #E1CDB8;
+$text-color-other: #e1cdb8;
 $title-color-other: #dfccc1;
 $btn-text-color: #f1ebe9;
 $btn-text-color-other: #1f2319;
 
 // Фоны
-$background-primary: linear-gradient(180.00deg, rgb(79, 80, 64),rgb(95, 90, 74) 24.9%,rgb(68, 73, 58) 70.4%);
+$background-primary: linear-gradient(
+  180deg,
+  rgb(79, 80, 64),
+  rgb(95, 90, 74) 24.9%,
+  rgb(68, 73, 58) 70.4%
+);
 $background-secondary: #cbb7a1;
 $background-program: #515945e3;
 $background-text: #b2a08c;

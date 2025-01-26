@@ -1,61 +1,127 @@
-import ProgramImage1 from './../../assets/images/program-1.png';
-import ProgramImage2 from './../../assets/images/program-2.png';
-
+import BirdImage from './../../assets/images/bird.png';
 import styles from './ProgramContent.module.scss';
 
 const ProgramContent = () => {
   return (
-    <section className={styles.program_content}>
-      <div className={styles.program_content_header}>ПРОГРАММА</div>
-      <div className={styles.module_buttons}>
-        <div className={styles.module_button}>
-          <p className={styles.module_button_text}>
-            Модуль 1<br />
-          </p>
-          <button>
-            <a>ИССЛЕДОВАНИЕ</a>
-          </button>
+    <div className={styles.program_content}>
+      <div className={styles.mainContent}>
+        <div className={styles.module}>
+          <div className={styles.module_header}>
+            <span>модуль 1</span>
+            <p>МУЗЕЙНАЯ И ЭКСКУРСИОННАЯ ДЕЯТЕЛЬНОСТЬ</p>
+          </div>
+          <div className={styles.arrowDown}>
+            <svg
+              width="18.321899"
+              height="39.003906"
+              viewBox="0 0 8.322 39.0039"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <desc>Created with Pixso.</desc>
+              <defs />
+              <path
+                id="Arrow 1"
+                d="M7.66 35.58L11.61 31.63C12 31.24 12.62 31.24 13.02 31.63C13.42 32.03 13.42 32.65 13.02 33.05L7.36 38.7C6.97 39.1 6.34 39.1 5.95 38.7L0.29 33.05C-0.1 32.65 -0.1 32.03 0.29 31.63C0.69 31.24 1.31 31.24 1.71 31.63L5.66 35.58L5.66 0L7.66 0L7.66 35.58Z"
+                fill="#BBA385"
+                fillOpacity="1.000000"
+                fillRule="evenodd"
+              />
+            </svg>
+          </div>
+          <ul className={styles.module_list}>
+            <li>
+              Какие правовые нормы регулируют экскурсионную и музейную
+              деятельность?
+            </li>
+            <li>
+              Чем экскурсия отличается от других видов коммуникации? Как сделать
+              экскурсию интересной и запоминающейся?
+            </li>
+            <li>
+              Какие технологии и методы использовать для создания качественного
+              интеллектуального продукта? Как выбрать тему и источники для
+              экскурсии или культурного проекта?
+            </li>
+            <li>
+              Какие технологические аспекты следует учитывать в музейной и
+              экскурсионной деятельности?
+            </li>
+            <li>
+              Как музеи и город могут быть использованы в качестве площадок
+              коммуникации?
+            </li>
+            <li>
+              Как разработать актуальную концепцию экскурсии для аудитории? Как
+              составить технологическую карту маршрута экскурсии, которая будет
+              удобной и понятной для экскурсовода и слушателей?
+            </li>
+          </ul>
         </div>
-        <div className={styles.module_button}>
-          <p className={styles.module_button_text}>Модуль 2</p>
-          <button>
-            <a>РЕАЛИЗАЦИЯ</a>
-          </button>
+        <div className={styles.module}>
+          <div className={styles.module_header_2}>
+            <span>модуль 2</span>
+            <p>КОММУНИКАЦИЯ</p>
+          </div>
+          <div className={styles.arrowDown}>
+            <svg
+              width="18.321899"
+              height="39.003906"
+              viewBox="0 0 8.322 39.0039"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <desc>Created with Pixso.</desc>
+              <defs />
+              <path
+                id="Arrow 1"
+                d="M7.66 35.58L11.61 31.63C12 31.24 12.62 31.24 13.02 31.63C13.42 32.03 13.42 32.65 13.02 33.05L7.36 38.7C6.97 39.1 6.34 39.1 5.95 38.7L0.29 33.05C-0.1 32.65 -0.1 32.03 0.29 31.63C0.69 31.24 1.31 31.24 1.71 31.63L5.66 35.58L5.66 0L7.66 0L7.66 35.58Z"
+                fill="#BBA385"
+                fillOpacity="1.000000"
+                fillRule="evenodd"
+              />
+            </svg>
+          </div>
+          <ul className={styles.module_list}>
+            <li>
+              Какие ключевые навыки вербальной презентации стоит развивать для
+              успешного публичного выступления? Какие невербальные сигналы
+              помогают установить контакт с аудиторией и сделать выступление
+              более эффективным?
+            </li>
+            <li>
+              Как определить портрет слушателя и адаптировать своё выступление
+              под его интересы и потребности? Какие методы вовлечения аудитории
+              в процесс выступления можно использовать? Как учитывать разные
+              типы восприятия информации у слушателей?
+            </li>
+            <li>
+              Что такое чувство текста и как его развить? Как выбрать подходящий
+              текст для публичного выступления?
+            </li>
+            <li>
+              Какие методы привлечения внимания аудитории можно использовать во
+              время экскурсии?
+            </li>
+            <li>
+              Что такое межкультурная коммуникация и почему она важна в
+              современном мире?
+            </li>
+            <li>
+              Почему экскурсия является важным информационным событием? Как
+              экскурсия влияет на социально-культурное развитие общества? Как
+              сделать экскурсию не только информативной, но и увлекательной?
+            </li>
+          </ul>
         </div>
       </div>
-      <div className={styles.description}>
-        Модули разработаны для проведения занятий в смешанном формате и
-        подразумевают комплексное обучение, включающее деловые игры, круглые
-        столы, посещение музейных площадок и общение со специалистами.
-        Программные часы направлены на интенсивный курс практических и
-        академических занятий оффлайн и онлайн с преподавателями, обсуждение
-        интересных тематических кейсов, а также подготовку и презентацию
-        проекта.
+      <img src={BirdImage} alt={BirdImage} className={styles.programImage} />
+      <div className={styles.descriprion}>
+        <h2 className={styles.descripritionTitle}>ЧЕМУ НАУЧИТЕСЬ</h2>
       </div>
-      <div className={styles.line}></div>
-      <div className={styles.learning_section}>
-        <div className={styles.learning_section_learning_item}>
-          <img
-            src={ProgramImage1}
-            alt="Процесс обучения"
-            className={styles.learning_section_learning_img_1}
-          />
-          <h3 className={styles.learning_section_learning_item_1}>
-            ПРОЦЕСС ОБУЧЕНИЯ
-          </h3>
-        </div>
-        <div className={styles.learning_section_learning_item}>
-          <img
-            src={ProgramImage2}
-            alt="Чему научитесь"
-            className={styles.learning_section_learning_img_2}
-          />
-          <h3 className={styles.learning_section_learning_item_2}>
-            ЧЕМУ НАУЧИТЕСЬ
-          </h3>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 

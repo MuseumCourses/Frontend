@@ -1,0 +1,142 @@
+@use './../../styles/base/variables' as *;
+@use './../../styles/mixins/mixins' as *;
+
+.requestForm {
+  background: linear-gradient(180.00deg, rgb(83, 79, 64) 25.5%,rgb(56, 53, 44) 76.4%,rgb(65, 60, 52) 100%);
+  color: #ecf0f1;
+  padding: 40px 0 40px 40px;
+  text-align: start;
+  position: relative;
+  overflow: hidden;
+  @include respond-to(xs) {
+    margin: 0 -10px;
+  }
+  @include respond-to(md) {
+    margin: 0 -15px;
+  }
+  @include respond-to(lg) {
+    margin: 0 -20px;
+  }
+  @include respond-to(xl) {
+    margin: 0 -25px;
+  }
+}
+
+.title {
+  @include property-text($font-angst-bold, 700, #DCCCB9, 32px, 45px, 0);
+  margin-bottom: 10px;
+}
+
+.description {
+  @include property-text($font-montserrat, 400, #E1CDB8, 15px, 18px, 0);
+  margin-bottom: 20px;
+  max-width: 650px;
+  width: 100%;
+}
+
+.requestField{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 430px;
+  width: 100%;
+}
+
+.table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: rgba(42, 39, 30, 0.56);
+  width: 100%;
+  border: 4px solid rgb(95, 101, 81);
+  @include property-text($font-felidae, 400, #FFFFFF, 16px, 20px, 1.5px);
+
+  td {
+    padding: 10px;
+    vertical-align: middle;
+    border: 2px solid rgb(95, 101, 81);
+    text-align: center;
+  }
+  .desc{
+    min-width: 80px;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+  }
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+  width: 1px !important;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.label {
+  @include property-text($font-montserrat, 400, #FFFFFF, 16px, 16px, 0);
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+  display: block;
+  min-height: 1.4em;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.4em;
+    height: 1.4em;
+    background: rgb(79, 80, 64);
+    border: 1px solid #95A5A6;
+  }
+
+  &.checked::before {
+    background: rgb(79, 80, 64) url('./../../assets/images/check-mark.svg') 
+      no-repeat center / 80%;
+  }
+}
+
+.checkboxSpec {
+  padding: 0 !important;
+  border-right: 0 !important;
+}
+
+.checkboxField {
+  border-left: 0 !important;
+}
+
+.button {
+  @include property-text($font-angst-bold, 700, #E1CDB8, 20px, 28px, 0);
+  padding: 7px 20px;
+  background: #664434;
+  border: 1px solid rgb(187, 163, 133);
+  border-radius: 70px;
+  text-transform: uppercase;
+}
+
+.requestBg1, .requestBg2{
+  position: absolute;
+}
+.requestBg1{
+  top: 10%;
+  right: -20%;
+}
+.requestBg2{
+  top: 40%;
+  left: -25%;
+}

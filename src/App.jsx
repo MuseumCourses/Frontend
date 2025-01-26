@@ -4,6 +4,7 @@ import Relevance from './components/Relevance/Relevance';
 import ProgramContent from './components/ProgramContent/ProgramContent';
 import Cost from './components/Cost/Cost';
 import AboutUs from './components/AboutUs/AboutUs';
+import RequestForm from './components/RequestForm/RequestForm';
 
 import './styles/main.scss';
 
@@ -17,6 +18,7 @@ function App() {
         <Slider />
         <ProgramContent />
         <Cost />
+        <RequestForm />
       </div>
     </>
   );

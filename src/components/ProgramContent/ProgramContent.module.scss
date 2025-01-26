@@ -2,297 +2,128 @@
 @use './../../styles/mixins/mixins' as *;
 
 .program_content {
-  max-width: $max-width;
-  gap: $gap-content;
-  padding: 30px;
-  margin: 0 -25px;
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: $program-background;
-
   @include respond-to(xs) {
-    margin: 0 -10px;
-    padding: 10px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 40px;
+    position: relative;
   }
-
   @include respond-to(sm) {
-    margin: 0 -10px;
-    padding: 15px;
   }
-
   @include respond-to(md) {
-    margin: 0 -15px;
-    padding: 20px;
   }
-
-  @include respond-to(lg) {
-    margin: 0 -20px;
-    padding: 30px;
-  }
-
   @include respond-to(xl) {
-    margin: 0 -25px;
   }
+  .mainContent {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    @include respond-to(lg) {
+      flex-direction: row;
+    }
+  }
+  .module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &_header,
+    &_header_2 {
+      text-align: center;
+      border: 4px solid rgb(95, 101, 81);
+      border-radius: 41px;
+      background: rgba(205, 196, 183, 0);
 
-  &_header {
+      width: 100%;
+      padding: 30px 0;
+
+      & span {
+        display: block;
+        @include property-text(
+          $font-montserrat,
+          400,
+          rgb(225, 205, 184),
+          38px,
+          36px,
+          0
+        );
+        margin-bottom: 15px;
+      }
+
+      p {
+        @include property-text($font-angst-bold, 700, white, 30px, 32px, 0);
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    &_header_2 {
+      padding: 47px;
+    }
+    &_list {
+      border: 4px solid rgb(95, 101, 81);
+      background: rgba(56, 50, 36, 0.26);
+      list-style-type: disc;
+      padding-left: 20px;
+      gap: 20px;
+      overflow: hidden;
+      z-index: 101;
+    }
+    &_list li {
+      padding: 5px;
+      @include property-text(
+        $font-montserrat,
+        400,
+        rgb(205, 196, 183),
+        14px,
+        20px,
+        5%
+      );
+      text-indent: -5px;
+      height: auto;
+      position: relative;
+    }
+    &_list li::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: -20px;
+      width: 105%;
+      height: 1px;
+      background-color: #5f6551;
+      border: 1px solid rgb(95, 101, 81);
+    }
+    &_list li:last-child::after {
+      width: 0%;
+    }
+    &_list li + li {
+      margin-top: 20px;
+    }
+  }
+  .descriprion {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+  }
+  .descripritionTitle {
     @include property-text(
       $font-angst-bold,
       700,
-      $program-header-color,
+      rgb(225, 205, 184),
       36px,
       50px,
       0%
     );
-    text-align: $align;
-    margin-bottom: 20px;
-
-    @include respond-to(xs) {
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    @include respond-to(sm) {
-      font-size: 28px;
-      line-height: 32px;
-    }
-
-    @include respond-to(md) {
-      font-size: 32px;
-      line-height: 40px;
-    }
-
-    @include respond-to(lg) {
-      font-size: 36px;
-      line-height: 50px;
-    }
   }
-
-  .module_buttons {
-    display: flex;
-    justify-content: center;
-    gap: ($gap-content * 1.5);
-    margin: 20px 0;
-    @include respond-to(xs) {
-      gap: ($gap-content * 1.5);
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-    }
-
-    @include respond-to(sm) {
-      gap: ($gap-content * 2);
-      flex-direction: row;
-      margin: 20px 0;
-    }
-
-    @include respond-to(md) {
-      gap: ($gap-content * 7.5);
-    }
-
-    @include respond-to(lg) {
-      gap: ($gap-content * 9.5);
-    }
-    .module_button_text {
-      @include property-text(
-        $font-felidae,
-        400,
-        $button-programm-color,
-        32px,
-        35px,
-        0%
-      );
-      text-align: $align;
-      @include respond-to(xs) {
-        font-size: 24px;
-        line-height: 28px;
-      }
-
-      @include respond-to(sm) {
-        font-size: 28px;
-        line-height: 32px;
-        margin-bottom: 7px;
-      }
-
-      @include respond-to(md) {
-        font-size: 30px;
-        line-height: 34px;
-        margin-bottom: 17px;
-      }
-
-      @include respond-to(lg) {
-        font-size: 32px;
-        line-height: 35px;
-      }
-    }
-
-    button {
-      padding: 15px 40px;
-      border-radius: 50px;
-      background: $module-btn-color;
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 32px;
-      transition: background-color 0.3s ease;
-      box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-      a {
-        color: $black-color-a;
-        font-family: $font-playfair;
-      }
-
-      &:hover {
-        background-color: $hover-color;
-      }
-
-      &:active {
-        background-color: $hover-color;
-        transform: scale(0.98);
-      }
-      @include respond-to(xs) {
-        font-size: 14px;
-        line-height: 16px;
-      }
-
-      @include respond-to(sm) {
-        font-size: 16px;
-        line-height: 22px;
-      }
-
-      @include respond-to(md) {
-        font-size: 22px;
-        line-height: 26px;
-      }
-
-      @include respond-to(lg) {
-        font-size: 24px;
-        line-height: 32px;
-      }
-    }
-  }
-
-  .description {
-    @include property-text(
-      $font-montserrat,
-      400,
-      $description-color,
-      20px,
-      24px,
-      5%
-    );
-    text-align: $align;
-    margin-top: 34px;
-    margin-bottom: 30px;
-    max-width: 750px;
-    width: 100%;
-    margin: 0 auto;
-
-    @include respond-to(xs) {
-      font-size: 14px;
-      line-height: 16px;
-    }
-
-    @include respond-to(sm) {
-      font-size: 16px;
-      line-height: 18px;
-    }
-
-    @include respond-to(md) {
-      font-size: 18px;
-      line-height: 20px;
-    }
-
-    @include respond-to(lg) {
-      font-size: 20px;
-      line-height: 24px;
-    }
-  }
-
-  .line {
-    margin: 20px auto 20px;
-    width: 80%;
-    height: 1px;
-    background-color: white;
-  }
-
-  .learning_section {
-    display: grid;
-    gap: 100px;
-    @include respond-to(xs) {
-      gap: 40px;
-    }
-    @include respond-to(md) {
-      gap: 100px;
-    }
-    &_learning_item {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      text-align: $align;
-      max-width: 810px;
-      width: 100%;
-      margin: 0 auto;
-
-      @include respond-to(xs) {
-        gap: 20px;
-        grid-template-columns: 1fr;
-        justify-items: center;
-      }
-
-      @include respond-to(sm) {
-        gap: 25px;
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @include respond-to(md) {
-        gap: 30px;
-      }
-
-      @include respond-to(lg) {
-        gap: 32px;
-      }
-    }
-
-    &_learning_item_1,
-    &_learning_item_2 {
-      @include property-text(
-        $font-playfair,
-        400,
-        $learning-item-color,
-        36px,
-        48px,
-        0%
-      );
-      text-align: $align;
-
-      @include respond-to(xs) {
-        font-size: 24px;
-        line-height: 28px;
-        order: -1;
-      }
-
-      @include respond-to(sm) {
-        font-size: 28px;
-        line-height: 32px;
-        order: 1;
-      }
-
-      @include respond-to(md) {
-        font-size: 32px;
-        line-height: 36px;
-      }
-
-      @include respond-to(lg) {
-        font-size: 36px;
-        line-height: 48px;
-      }
-    }
-
-    &_learning_item_2 {
-      order: -1;
-    }
-
-    &_learning_img_2 {
-      justify-self: center;
-    }
-  }
+}
+.programImage {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  z-index: 100;
+}
+.arrowDown {
+  display: flex;
+  justify-content: center;
 }
