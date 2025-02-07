@@ -6,22 +6,20 @@
     display: flex;
     align-items: start;
     flex-direction: column;
-    margin-top: 40px;
+    padding: 50px 25px 11px;
     position: relative;
-  }
-  @include respond-to(sm) {
-  }
-  @include respond-to(md) {
-  }
-  @include respond-to(xl) {
+    background: linear-gradient(180deg, rgb(65, 66, 52), rgb(84, 79, 65) 100%);
   }
   .mainContent {
     display: flex;
     align-items: start;
     flex-direction: column;
-    gap: 20px;
+    @include respond-to(xs) {
+      gap: 160px;
+    }
     @include respond-to(lg) {
       flex-direction: row;
+      gap: 20px;
     }
   }
   .module {
@@ -37,7 +35,7 @@
       background: rgba(205, 196, 183, 0);
 
       width: 100%;
-      padding: 30px 0;
+      padding: 30px 5px;
 
       & span {
         display: block;
@@ -53,9 +51,15 @@
       }
 
       p {
-        @include property-text($font-angst-bold, 700, white, 30px, 32px, 0);
         text-transform: uppercase;
         text-align: center;
+        color: white;
+        @include respond-to(xs) {
+          @include property-text($font-angst-bold, 700, white, 20px, 32px, 0);
+        }
+        @include respond-to(md) {
+          font-size: 28px;
+        }
       }
     }
     &_header_2 {
@@ -72,14 +76,7 @@
     }
     &_list li {
       padding: 5px;
-      @include property-text(
-        $font-montserrat,
-        400,
-        rgb(205, 196, 183),
-        14px,
-        20px,
-        5%
-      );
+      @include property-text($font-montserrat, 400, #cdc4b7, 14px, 20px, 5%);
       text-indent: -5px;
       height: auto;
       position: relative;
@@ -100,11 +97,20 @@
     &_list li + li {
       margin-top: 20px;
     }
+    &_list {
+      @include respond-to(xs) {
+        height: auto;
+      }
+      @include respond-to(lg) {
+        height: 560px;
+      }
+    }
   }
   .descriprion {
     margin-top: 100px;
     width: 100%;
     text-align: center;
+    z-index: 101;
   }
   .descripritionTitle {
     @include property-text(
@@ -115,6 +121,54 @@
       50px,
       0%
     );
+    text-align: start;
+  }
+}
+.programTitle {
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  @include property-text(
+    $font-angst-bold,
+    700,
+    rgb(225, 205, 184),
+    64px,
+    90px,
+    0%
+  );
+  @include respond-to(xs) {
+    font-size: 34px;
+    line-height: 50px;
+    margin-bottom: 70px;
+  }
+  @include respond-to(sm) {
+    font-size: 44px;
+  }
+  @include respond-to(md) {
+    font-size: 54px;
+    line-height: 70px;
+  }
+  @include respond-to(lg) {
+    font-size: 64px;
+    line-height: 90px;
+  }
+}
+.module_list_first li {
+  &:nth-child(1) {
+    height: 70px;
+    margin-top: 10px;
+  }
+  &:nth-child(2) {
+    height: 70px;
+    margin-top: 10px;
+  }
+  &:nth-child(3) {
+    margin-top: 12px;
+    height: 90px;
+  }
+  &:nth-child(4) {
+    height: 70px;
+    margin-top: 10px;
   }
 }
 .programImage {
@@ -122,8 +176,24 @@
   bottom: 20px;
   right: 0;
   z-index: 100;
+  @include respond-to(xs) {
+    bottom: 30px;
+  }
+  @include respond-to(sm) {
+  }
 }
 .arrowDown {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 410px) {
+  .module_list_first li {
+    &:nth-child(2) {
+      height: 90px;
+    }
+    &:nth-child(3) {
+      height: 140px;
+    }
+  }
 }

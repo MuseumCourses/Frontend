@@ -1,0 +1,266 @@
+@use './../../styles/base/variables' as *;
+@use './../../styles/mixins/mixins' as *;
+
+.content {
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  @include respond-to(xs) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  @include respond-to(lg) {
+    flex-direction: row;
+    gap: 25px;
+  }
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(33, 32, 24, 0.8) 62.4%,
+    rgba(64, 65, 51, 0.8) 99.98%
+  );
+  z-index: -1;
+  @include respond-to(xs) {
+    height: 1450px;
+  }
+  @include respond-to(sm) {
+    height: 1600px;
+  }
+  @include respond-to(md) {
+    height: 890px;
+  }
+}
+
+.content::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  @include respond-to(xs) {
+    background: url(./../../assets/images/header-full.png) top center / contain
+      no-repeat;
+    height: 1300px;
+    width: 100%;
+    top: 0;
+  }
+  @include respond-to(sm) {
+    height: 1650px;
+  }
+  @include respond-to(md) {
+    top: -150px;
+    left: -100px;
+    width: calc(100% + 100px);
+    height: 860px;
+    background: url(./../../assets/images/header-2.png) top left / contain
+      no-repeat;
+  }
+  @include respond-to(lg) {
+  }
+}
+
+.blur_overlay {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(56, 56, 45, 0) 18.944%,
+    rgba(55, 55, 44, 0.41) 56.972%,
+    rgb(55, 55, 44) 75%
+  );
+  height: 250px;
+  width: 100%;
+  z-index: 9;
+  @include respond-to(sm) {
+    height: 70%;
+  }
+  @include respond-to(lg) {
+    height: 23%;
+  }
+}
+
+.headerItem {
+  order: 1;
+  width: 100%;
+  @include respond-to(xs) {
+    margin-top: 40px;
+  }
+  @include respond-to(sm) {
+    margin-top: 125px;
+  }
+  @include respond-to(md) {
+    margin-top: 50px;
+  }
+}
+
+.headerItem:first-child {
+  width: 100%;
+  order: 0;
+  @include respond-to(xs) {
+    margin-top: 10px;
+  }
+  @include respond-to(sm) {
+    margin-top: 50px;
+  }
+  @include respond-to(md) {
+    margin-top: 20px;
+  }
+  @include respond-to(lg) {
+    max-width: 510px;
+  }
+}
+
+.headerTitle {
+  @include property-text($font-angst-bold, 700, #e0d0bd, 48px, 55px, 2px);
+  text-transform: uppercase;
+  & span {
+    @include respond-to(xs) {
+      margin-right: 0;
+    }
+    @include respond-to(sm) {
+      margin-right: 140px;
+    }
+  }
+  @include respond-to(xs) {
+    font-size: 34px;
+    line-height: 50px;
+    text-align: start;
+  }
+  @include respond-to(sm) {
+    font-size: 64px;
+    line-height: 90px;
+  }
+  @include respond-to(md) {
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+.headerMini {
+  @include respond-to(xs) {
+    margin-right: 30px !important;
+    font-size: 24px;
+  }
+  @include respond-to(sm) {
+    margin-right: 80px !important;
+    font-size: 36px;
+  }
+  @include respond-to(lg) {
+    margin-right: 0 !important;
+    font-size: 32px;
+  }
+}
+
+.line {
+  border: 1px solid rgb(95, 101, 81);
+  width: 80%;
+  @include respond-to(xs) {
+    margin: 15px 0;
+    width: 70%;
+  }
+  @include respond-to(sm) {
+    margin: 30px 0;
+    width: 80%;
+  }
+  @include respond-to(lg) {
+    margin: 15px 0;
+  }
+}
+.headerSubText {
+  @include property-text($font-angst-thin, 100, #cdc4b7, 20px, 28px, 0);
+  text-transform: uppercase;
+  @include respond-to(xs) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @include respond-to(sm) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  @include respond-to(md) {
+  }
+}
+.item {
+  @include respond-to(xs) {
+    margin-bottom: 70px;
+  }
+  @include respond-to(sm) {
+    margin-bottom: 200px;
+  }
+  @include respond-to(md) {
+    margin-bottom: 50px;
+  }
+}
+.headerTitle2 {
+  @include property-text($font-angst-bold, 700, #cdc4b7, 40px, 50px, 5%);
+  text-align: right;
+  @include respond-to(xs) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  @include respond-to(sm) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+.headerSubText2 {
+  @include property-text($font-angst-thin, 100, #cdc4b7, 20px, 35px, 2.3px);
+  text-align: right;
+  margin-top: 10px;
+  @include respond-to(xs) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @include respond-to(sm) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+.headerSubtitle {
+  @include property-text($font-montserrat, 400, #cdc4b7, 16px, 20px, 0);
+  text-align: center;
+  @include respond-to(xs) {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  @include respond-to(lg) {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+}
+
+.headerImg {
+  position: relative;
+  border: 3px solid rgb(95, 101, 81);
+  border-radius: 203px;
+  background: rgba(217, 217, 217, 0);
+  padding: 10px;
+  z-index: 10;
+  @include respond-to(xs) {
+    max-width: 220px;
+    width: 100%;
+    height: 360px;
+    margin-left: auto;
+  }
+  @include respond-to(sm) {
+    max-width: 350px;
+    height: 600px;
+    margin-left: 0;
+  }
+  @include respond-to(md) {
+    height: 550px;
+  }
+  @include respond-to(lg) {
+    height: auto;
+  }
+}

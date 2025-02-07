@@ -4,6 +4,7 @@ import styles from './ProgramContent.module.scss';
 const ProgramContent = () => {
   return (
     <div className={styles.program_content}>
+      <h2 className={styles.programTitle}>Модули</h2>
       <div className={styles.mainContent}>
         <div className={styles.module}>
           <div className={styles.module_header}>
@@ -30,7 +31,7 @@ const ProgramContent = () => {
               />
             </svg>
           </div>
-          <ul className={styles.module_list}>
+          <ul className={`${styles.module_list} ${styles.module_list_first}`}>
             <li>
               Какие правовые нормы регулируют экскурсионную и музейную
               деятельность?
@@ -119,7 +120,7 @@ const ProgramContent = () => {
       </div>
       <img src={BirdImage} alt={BirdImage} className={styles.programImage} />
       <div className={styles.descriprion}>
-        <h2 className={styles.descripritionTitle}>ЧЕМУ НАУЧИТЕСЬ</h2>
+        <h2 className={styles.descripritionTitle}>ВАС ЖДЁТ:</h2>
       </div>
     </div>
   );

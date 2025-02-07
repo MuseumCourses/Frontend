@@ -4,25 +4,16 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-x: hidden;
-
-  @include respond-to(xs) {
-    padding: 0 10px;
-  }
-
-  @include respond-to(md) {
-    padding: 0 15px;
-  }
-
-  @include respond-to(lg) {
-    padding: 0 20px;
-  }
-
-  @include respond-to(xl) {
-    padding: 0 25px;
-  }
+}
+.content {
+  background: linear-gradient(
+    180deg,
+    rgb(79, 80, 64),
+    rgb(95, 90, 74) 24.9%,
+    rgb(65, 66, 52) 70.4%
+  );
 }

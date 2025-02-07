@@ -1,5 +1,5 @@
-import AboutUsProgram from './AboutUsProgram';
 import AboutUs1 from './../../assets/images/about-us-1.png';
+import AboutUs3 from './../../assets/images/about-us-3.png';
 
 import styles from './AboutUs.module.scss';
 
@@ -11,6 +11,11 @@ const AboutUs = () => {
           src={AboutUs1}
           alt={AboutUs1}
           className={`${styles.about_us_image} ${styles.reverse_image}`}
+        />
+        <img
+          src={AboutUs3}
+          alt={AboutUs3}
+          className={`${styles.about_us_image_2}`}
         />
         <div className={styles.about_us_content}>
           <h1 className={styles.about_us_title}>О НАС</h1>
@@ -33,7 +38,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <AboutUsProgram />
     </section>
   );
 };

@@ -19,6 +19,17 @@
 }
 
 @font-face {
+  font-family: 'Montserrat-Light';
+  src:
+    url('/src/assets/fonts/MontserratLight/Montserrat-Light.woff')
+      format('woff'),
+    url('/src/assets/fonts/MontserratLight/Montserrat-Light.woff2')
+      format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'PlayfairDisplay-Regular';
   src:
     url('/src/assets/fonts/PlayfairDisplay/PlayfairDisplay-Regular.woff')
@@ -46,5 +57,14 @@
     url('/src/assets/fonts/AngstBold/Angst-Bold.woff') format('woff'),
     url('/src/assets/fonts/AngstBold/Angst-Bold.woff2') format('woff2');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Angst-Thin';
+  src:
+    url('/src/assets/fonts/AngstThin/AngstThin.woff') format('woff'),
+    url('/src/assets/fonts/AngstThin/AngstThin.woff2') format('woff2');
+  font-weight: 100;
   font-style: normal;
 }

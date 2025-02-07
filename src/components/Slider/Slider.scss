@@ -1,0 +1,183 @@
+@use './../../styles/mixins/mixins' as *;
+@use './../../styles/base/variables' as *;
+
+.sliderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.sliderContainer {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Добавляем относительное позиционирование */
+  @include respond-to(xs) {
+    margin: 10px auto;
+    width: 100%;
+  }
+  @include respond-to(sm) {
+    margin: 30px auto;
+    width: 80%;
+  }
+  @include respond-to(md) {
+    margin: 30px auto;
+  }
+  @include respond-to(lg) {
+    margin: 80px auto;
+  }
+}
+
+.swiper {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+.swiper-pagination {
+  position: static !important;
+  margin-top: 30px !important;
+  padding: 8px 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 13px !important;
+  height: 13px !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+  transition: all 0.3s !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff !important;
+  transform: scale(2) !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '' !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  z-index: 100 !important;
+  @include respond-to(xs) {
+    height: 60px !important;
+  }
+  @include respond-to(sm) {
+    height: 110px !important;
+  }
+  @include respond-to(md) {
+    height: 150px !important;
+  }
+  @include respond-to(lg) {
+    height: 210px !important;
+  }
+}
+
+.swiper-button-next {
+  @include respond-to(xs) {
+    right: 0px !important;
+  }
+  @include respond-to(sm) {
+    right: -50px !important;
+  }
+}
+
+.swiper-button-prev {
+  @include respond-to(xs) {
+    left: 0px !important;
+  }
+  @include respond-to(sm) {
+    left: -50px !important;
+  }
+}
+.sliderTextPlace {
+  @include property-text($font-montserrat, 400, $title-info, 14px, 18px, 5%);
+  padding: 24px 32px;
+  background: rgba(95, 101, 81, 0.4);
+  border: 2px solid #5f6551;
+  max-width: 760px;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+  @include respond-to(xs) {
+    padding: 16px 14px;
+    max-width: 330px;
+    font-size: 14px;
+  }
+  @include respond-to(sm) {
+    padding: 20px 28px;
+    font-size: 16px;
+    max-width: 580px;
+  }
+  @include respond-to(lg) {
+    padding: 24px 32px;
+    font-size: 18px;
+    max-width: 760px;
+  }
+}
+
+.line {
+  border: 1px solid rgb(95, 101, 81);
+  width: 85%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 420px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.active-slide {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.contentSlider {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  height: 350px;
+  &:first-child {
+    width: 220px;
+  }
+
+  @include respond-to(xs) {
+    width: 200px;
+  }
+  @include respond-to(sm) {
+    width: 350px;
+  }
+  @include respond-to(md) {
+    width: 250px;
+  }
+  @include respond-to(lg) {
+    width: 200px;
+  }
+}
+
+.contentSlider img {
+  width: 100%;
+  height: auto;
+}
+
+.line {
+  border: 1px solid #5f6551;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0 25px;
+}

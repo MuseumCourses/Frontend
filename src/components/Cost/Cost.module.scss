@@ -7,7 +7,7 @@
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  height: 1100px;
+  height: 1200px;
   background-image: url('./../../assets/images/cost-bg.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -15,6 +15,7 @@
 
   @include respond-to(xs) {
     margin: 0 -10px;
+    height: 1200px;
   }
 
   @include respond-to(sm) {
@@ -26,6 +27,7 @@
 
   @include respond-to(lg) {
     margin: 0 -20px;
+    height: 1400px;
   }
 
   @include respond-to(xl) {
@@ -39,7 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include property-text($font-angst-bold, 700, #3b1721, 48px, 64px, 0%);
+    @include property-text($font-angst-bold, 700, #262520, 48px, 64px, 0%);
     text-align: $align;
 
     @include respond-to(xs) {
@@ -89,20 +91,49 @@
   }
 }
 .costBlock {
-  margin-top: 100px;
+  margin-top: 230px;
+
   border: 3px solid rgb(222, 210, 195);
   border-radius: 3px;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background: rgb(68, 73, 58, 0.6);
-  max-width: 800px;
-  width: 100%;
-  height: 200px;
+  background: rgba(95, 101, 81, 0.8);
+  opacity: 0.6;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 5px;
+  width: 100%;
+  color: #E1CDB8;
+
+  @include respond-to(xs) {
+    max-width: 300px;
+    height: 150px;
+    font-size: 12px;
+  }
+
+  @include respond-to(sm) {
+    max-width: 400px;
+    height: 200px;
+    font-size: 16px;
+  }
+
+  @include respond-to(md) {
+    max-width: 600px;
+    font-size: 18px;
+  }
+
+  @include respond-to(lg) {
+    max-width: 800px;
+  }
 
   & span {
     display: block;
   }
+}
+
+.text {
+  margin-bottom: 10px;
+}
+
+.message {
+  font-style: italic;
+  margin-bottom: 20px;
 }

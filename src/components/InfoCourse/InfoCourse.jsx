@@ -1,5 +1,7 @@
 import styles from './InfoCourse.module.scss';
 
+import Bird from './../../assets/images/bird.png';
+
 const InfoCourse = () => {
   return (
     <div className={styles.container}>
@@ -15,7 +17,8 @@ const InfoCourse = () => {
           <h2 className={styles['content_item-title']}>ФОРМА ОБУЧЕНИЯ</h2>
           <div className={styles['content_sub-text-even']}>
             <h3 className={styles['content_item-subtitle']}>
-              смешанная (онлайн/оффлайн)
+              смешанная <br />
+              (онлайн/оффлайн)
             </h3>
             <p className={styles['content_item-description']}>
               72 часа (2,5 мес)
@@ -25,6 +28,7 @@ const InfoCourse = () => {
       </div>
       <div className={styles.contentProcess}>
         <h2 className={styles.processTitle}>ПРОЦЕСС ОБУЧЕНИЯ</h2>
+        <img src={Bird} alt={Bird} className={styles.contentImg} />
         <p className={styles.processText}>
           Модули разработаны для проведения занятий в смешанном формате и
           подразумевают комплексное обучение, включающее деловые игры, круглые
@@ -37,7 +41,6 @@ const InfoCourse = () => {
           проекта.
         </p>
       </div>
-      <div className={styles.line}></div>
     </div>
   );
 };

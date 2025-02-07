@@ -1,40 +1,50 @@
 @use './../../styles/base/variables' as *;
 @use './../../styles/mixins/mixins' as *;
 
+.relevanceContent {
+  @include respond-to(xs) {
+    padding: 8px 8px 10px 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 8px 8px 10px 20px;
+    gap: 15px;
+  }
+
+  @include respond-to(md) {
+    padding: 8px 8px 15px 25px;
+  }
+
+  @include respond-to(lg) {
+    padding: 11px 11px 30px 50px;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
 
   @include respond-to(xs) {
-    margin: 0 -10px;
-    padding: 8px 8px 10px 20px;
     gap: 15px;
     flex-direction: column;
     align-items: center;
   }
 
   @include respond-to(sm) {
-    margin: 0 -10px;
-    padding: 8px 8px 10px 20px;
     gap: 15px;
     flex-direction: row;
     align-items: start;
   }
 
   @include respond-to(md) {
-    margin: 0 -15px;
-    padding: 8px 8px 15px 25px;
     gap: 20px;
   }
 
   @include respond-to(lg) {
-    margin: 0 -20px;
-    padding: 11px 11px 30px 50px;
     gap: 25px;
   }
 
   @include respond-to(xl) {
-    margin: 0 -25px;
     gap: 35px;
   }
 }
@@ -57,13 +67,13 @@
   }
 
   &_title {
-    @include property-text($font-playfair, 700, $title-info, 36px, 48px, 1px);
+    @include property-text($font-angst-bold, 700, $title-info, 36px, 48px, 1px);
     text-align: start;
     max-width: 350px;
     width: 100%;
     @include respond-to(xs) {
-      font-size: 22px;
-      line-height: 28px;
+      font-size: 40px;
+      line-height: 40px;
     }
 
     @include respond-to(sm) {
@@ -77,16 +87,38 @@
     }
   }
 
-  &_text {
+  &_text_spec {
+    @include respond-to(xs) {
+      display: none;
+    }
+    @include respond-to(sm) {
+      display: block;
+    }
+  }
+
+  &_text,
+  &_text_down {
     @include property-text($font-montserrat, 400, $title-info, 16px, 20px, 5%);
     text-align: start;
     @include respond-to(xs) {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 14px;
     }
     @include respond-to(md) {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 20px;
+    }
+  }
+  &_text_down {
+    margin-top: 15px;
+    line-height: 18px;
+    @include respond-to(xs) {
+      display: block;
+      font-size: 15px;
+    }
+    @include respond-to(sm) {
+      display: none;
+      font-size: 18px;
     }
   }
 }
@@ -95,11 +127,23 @@
   width: 100%;
   max-width: 500px;
   height: auto;
+  border-radius: 200px;
 
   @include respond-to(xs) {
     max-width: 300px;
+    order: 1;
+  }
+  @include respond-to(sm) {
+    order: 0;
   }
   @include respond-to(md) {
     max-width: 350px;
   }
+}
+
+.line {
+  border: 1px solid #5f6551;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
 }

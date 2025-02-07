@@ -4,6 +4,12 @@
 .container {
   display: flex;
   flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    rgb(55, 55, 44) 28.051%,
+    rgb(79, 80, 64) 84.469%
+  );
+  padding: 0 11px;
   & .center_text {
     align-items: center;
     & p {
@@ -18,17 +24,23 @@
     margin-bottom: 20px;
     @include respond-to(xs) {
       gap: 10px;
-      padding: 10px;
+      padding: 15px 15px 15px 20px;
       flex-direction: column;
       align-items: center;
+      margin-top: 40px;
     }
     @include respond-to(sm) {
       flex-direction: row;
+      padding: 8px 8px 10px 20px;
       gap: 20px;
     }
     @include respond-to(md) {
       flex-direction: row;
+      padding: 8px 8px 15px 25px;
       gap: 60px;
+    }
+    @include respond-to(lg) {
+      padding: 11px 11px 30px 50px;
     }
   }
   &_content {
@@ -52,27 +64,31 @@
     );
     text-align: start;
     width: 100%;
-
     @include respond-to(xs) {
-      font-size: 26px;
-      line-height: 28px;
+      font-size: 44px;
+      line-height: 40px;
+      margin-bottom: 25px;
     }
-
-    @include respond-to(sm) {
-      font-size: 30px;
-    }
-
     @include respond-to(md) {
       font-size: 38px;
       line-height: 56px;
+      margin-bottom: 0;
     }
-
     @include respond-to(lg) {
       font-size: 46px;
     }
   }
 
-  &_text {
+  &_text_spec {
+    @include respond-to(xs) {
+      display: none;
+    }
+    @include respond-to(sm) {
+      display: block;
+    }
+  }
+  &_text,
+  &_text_down {
     @include property-text(
       $font-montserrat,
       400,
@@ -87,6 +103,7 @@
 
     @include respond-to(xs) {
       margin-top: 10px;
+      line-height: 21px;
     }
 
     @include respond-to(sm) {
@@ -99,6 +116,18 @@
 
     @include respond-to(lg) {
       margin-top: 40px;
+      font-size: 18px;
+    }
+  }
+  &_text_down {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    @include respond-to(xs) {
+      display: block;
+    }
+    @include respond-to(sm) {
+      display: none;
     }
   }
 
@@ -106,10 +135,13 @@
     max-width: 370px;
     width: 100%;
     height: auto;
-    display: block;
 
+    @include respond-to(xs) {
+      display: none;
+    }
     @include respond-to(sm) {
       order: -1;
+      display: block;
     }
 
     @include respond-to(md) {
@@ -121,21 +153,50 @@
       max-width: 520px;
     }
   }
+  &_image_2 {
+    max-width: 670px;
+    width: 100%;
+    margin-left: -65%;
+    z-index: 0;
+    @include respond-to(xs) {
+      display: block;
+      margin-top: 5%;
+    }
+    @include respond-to(sm) {
+      margin-top: -5%;
+      display: none;
+    }
+  }
   &_desc {
     border: 3px solid rgb(95, 101, 81);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 24px 20px;
+    padding: 24px 12px;
     margin-top: 60px;
+    width: 100%;
+    margin-left: auto;
+    z-index: 1;
 
     @include property-text(
       $font-montserrat,
       400,
       $title-text-color,
-      15px,
+      18px,
       18px,
       0%
     );
-    text-align: left;
+
+    @include respond-to(xs) {
+      max-width: 400px;
+      padding: 25px;
+      font-size: 15px;
+      text-align: center;
+    }
+    @include respond-to(sm) {
+      max-width: 550px;
+      font-size: 18px;
+      padding: 24px 12px;
+      text-align: left;
+    }
   }
 }
 .item_center {
@@ -154,6 +215,11 @@
   display: block;
   @include respond-to(xs) {
     max-width: 270px;
+    margin-top: 40px;
+    margin-left: auto;
+  }
+  @include respond-to(sm) {
+    margin-top: 0;
   }
   @include respond-to(md) {
     max-width: 370px;
