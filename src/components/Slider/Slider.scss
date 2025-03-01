@@ -151,6 +151,8 @@
   padding: 20px;
   font-family: 'Roboto', sans-serif;
   height: 350px;
+  display: flex;
+  align-items: center;
   &:first-child {
     width: 220px;
   }

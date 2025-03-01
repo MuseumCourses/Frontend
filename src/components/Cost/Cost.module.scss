@@ -3,7 +3,6 @@
 
 .cost_section {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
@@ -12,14 +11,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 5px;
 
   @include respond-to(xs) {
     margin: 0 -10px;
-    height: 1200px;
+    height: 900px;
   }
 
   @include respond-to(sm) {
     margin: 0 -10px;
+    height: 1200px;
   }
   @include respond-to(md) {
     margin: 0 -15px;
@@ -34,90 +35,161 @@
     margin: 0 -25px;
   }
 
-  &_circle {
+  &_price {
+    border: 3px solid rgb(119, 125, 105);
+    border-radius: 100px;
     box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background: rgb(223, 204, 193, 0.4);
-    border-radius: 50%;
+    background: rgba(48, 44, 34, 0.4);
+
+    margin: 75px 0;
+
+    text-align: start;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    @include property-text($font-angst-bold, 700, #262520, 48px, 64px, 0%);
-    text-align: $align;
 
     @include respond-to(xs) {
-      font-size: 24px;
-      line-height: 36px;
-      width: 300px;
+      width: 370px;
+      height: 180px;
+      padding: 30px;
+      margin: 35px 0;
+      border-radius: 60px;
+    }
+
+    @include respond-to(sm) {
+      width: 550px;
+      height: 220px;
+      padding: 40px;
+      margin: 45px 0;
+    }
+
+    @include respond-to(md) {
+      width: 620px;
+      height: 260px;
+      padding: 40px;
+      margin: 55px 0;
+      border-radius: 80px;
+    }
+
+    @include respond-to(lg) {
+      width: 750px;
       height: 300px;
-    }
-
-    @include respond-to(sm) {
-      font-size: 32px;
-      line-height: 40px;
-      width: 360px;
-      height: 360px;
-    }
-
-    @include respond-to(md) {
-      font-size: 40px;
-      line-height: 44px;
-      width: 420px;
-      height: 420px;
-    }
-
-    @include respond-to(lg) {
-      font-size: 48px;
-      line-height: 64px;
-      width: 480px;
-      height: 480px;
-    }
-  }
-  &_text {
-    width: 100%;
-    text-align: center;
-    @include respond-to(xs) {
-      max-width: 230px;
-    }
-    @include respond-to(sm) {
-      max-width: 300px;
-    }
-    @include respond-to(md) {
-      max-width: 350px;
-    }
-
-    @include respond-to(lg) {
-      max-width: 406px;
+      padding: 60px;
+      margin: 75px 0;
+      border-radius: 100px;
     }
   }
 }
-.costBlock {
-  margin-top: 230px;
-
-  border: 3px solid rgb(222, 210, 195);
-  border-radius: 3px;
-  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background: rgba(95, 101, 81, 0.8);
-  opacity: 0.6;
-
-  padding: 5px;
+.cost_title{
+  @include property-text($font-angst-bold, 700, #E1CDB8, 48px, 52px, 0%);
+  margin-top: 70px;
+  text-align: center;
   width: 100%;
-  color: #E1CDB8;
+  & span{
+    @include property-text($font-angst-bold, 700, #BBAC9B, 32px, 52px, 0%);
+  }
 
   @include respond-to(xs) {
-    max-width: 300px;
-    height: 150px;
+    font-size: 32px;
+    line-height: 30px;
+    max-width: 340px;
+  }
+  @include respond-to(sm) {
+    font-size: 40px;
+    line-height: 40px;
+    max-width: 400px;
+  }
+  @include respond-to(md) {
+    font-size: 44px;
+    line-height: 46px;
+    max-width: 450px;
+  }
+  @include respond-to(lg) {
+    font-size: 48px;
+    line-height: 52px;
+    max-width: 500px;
+  }
+}
+
+.cost_price_text{
+  @include property-text($font-montserrat, 400, #E1CDB8, 24px, 32px, 0%);
+  &:first-child{
+    margin-bottom: 30px;
+    @include respond-to(xs) {
+      margin-bottom: 15px;
+    }
+    @include respond-to(lg) {
+      margin-bottom: 30px;
+    }
+  }
+  & span{
+    @include property-text($font-angst-bold, 700, #E1CDB8, 36px, 32px, 0%);
+    @include respond-to(xs) {
+      font-size: 20px;
+      line-height: 18px;
+    }
+    @include respond-to(sm) {
+      font-size: 28px;
+      line-height: 24px;
+    }
+    @include respond-to(md) {
+      font-size: 32px;
+      line-height: 28px;
+    }
+    @include respond-to(lg) {
+      font-size: 36px;
+      line-height: 32px;
+    }
+  }
+  @include respond-to(xs) {
     font-size: 12px;
+    line-height: 22px;
+  }
+  @include respond-to(sm) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  @include respond-to(md) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  @include respond-to(lg) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.spec_span{
+  font-size: 24px !important;
+  font-family: $font-montserrat !important;
+
+  @include respond-to(xs) {
+    font-size: 20px !important;
+  }
+  @include respond-to(sm) {
+    font-size: 22px !important;
+  }
+  @include respond-to(md) {
+    font-size: 24px !important;
+  }
+}
+
+.costBlock {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 40px;
+
+  @include respond-to(xs) {
+    max-width: 340px;
   }
 
   @include respond-to(sm) {
-    max-width: 400px;
-    height: 200px;
-    font-size: 16px;
+    max-width: 500px;
   }
 
   @include respond-to(md) {
     max-width: 600px;
-    font-size: 18px;
   }
 
   @include respond-to(lg) {
@@ -128,12 +200,25 @@
     display: block;
   }
 }
+.costListItem{
+  @include property-text($font-montserrat, 700, #E1CDB8, 24px, 28px, 0%);
+  @include respond-to(xs) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 
-.text {
-  margin-bottom: 10px;
-}
+  @include respond-to(sm) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 
-.message {
-  font-style: italic;
-  margin-bottom: 20px;
+  @include respond-to(md) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include respond-to(lg) {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
